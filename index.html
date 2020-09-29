@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>MAFIA</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<head>
+	<title></title>
+</head>
+<body>
+
+	<div id="wraphome" class="wraphome">
+		<div class="rule"><h2>Правила игры</h2>
+			Правила игры аналогичны правилам классической игры «Мафия».<br><br> 
+			Базовые правила очень просты.<br><br>
+			В начале игры сервер случайным образом распределяет роли между картами. Затем вы выбираете любую карту (карты «лежат» «рубашкой» вверх). Вы можете получить следующие роли: мирный житель или мафия.<br><br>
+			Игра делится на чередующиеся этапы следующих типов: день, ночь, голосование.<br><br>
+			Днём честные жители, во время обсуждения, пытаются вычислить, кто в игре — мафия, и путём голосования выбирают, кого посадить в тюрьму. Ночью мафия убивает (также путём голосования) честных жителей. Чтобы убить честного жителя, мафия должна консолидированно проголосовать за одного и того же игрока.<br><br>
+			Задача в игре для мафии — убить всех честных жителей, для честных — посадить всю мафию в тюрьму.<br> <br>
+			Это очень краткие правила игры в мафию, но их вполне хватит для понимания процесса игры.<br><br>
+			</div>
+		<button id="gameButton" class="gameButton" onclick="start()">Начать игру</button>
+	</div>
+	
+	<div id="wrapstart" class="wrapstart">
+
+		<div class="startH2">Выберите карту</div>
+		<div id="sc1" onclick="choiceRole(cardNumber[0], 1)" class="card"></div>
+		<div id="sc2" onclick="choiceRole(cardNumber[1], 2)" class="card"></div>
+		<div id="sc3" onclick="choiceRole(cardNumber[2], 3)" class="card"></div>
+		<div id="sc4" onclick="choiceRole(cardNumber[3], 4)" class="card"></div>
+		<div id="sc5" onclick="choiceRole(cardNumber[4], 5)" class="card"></div>
+		<div id="sc6" onclick="choiceRole(cardNumber[5], 6)" class="card"></div>
+		<div id="sc7" onclick="choiceRole(cardNumber[6], 7)" class="card"></div>
+		<div id="sc8" onclick="choiceRole(cardNumber[7], 8)" class="card"></div>
+		<div id="rol" class="startH2"></div>
+		<button id="startButton" class="startButton" onclick="startGame()">Начать игру</button>
+	</div>
+	
+	<div id="wrap" class="wrap">
+		
+		<div id="c1" onclick="cardNub(cardNumber[0], 1)" class="card"></div>
+		<div id="c2" onclick="cardNub(cardNumber[1], 2)" class="card"></div>
+		<div id="c3" onclick="cardNub(cardNumber[2], 3)" class="card"></div>
+		<div id="c4" onclick="cardNub(cardNumber[3], 4)" class="card"></div>
+		<div id="c5" onclick="cardNub(cardNumber[4], 5)" class="card"></div>
+		<div id="c6" onclick="cardNub(cardNumber[5], 6)" class="card"></div>
+		<div id="c7" onclick="cardNub(cardNumber[6], 7)" class="card"></div>
+		<div id="c8" onclick="cardNub(cardNumber[7], 8)" class="card"></div>
+	
+	<div id="delay" class="delay"> <p>Идет голосование...</p><br><img src ="img/6-3.gif" width="300" height="200" ></div>
+	
+	<div id="logi" class="log">
+		<p id = "outRound"></p>
+		<button class="endButton" onclick="endGame()">Закончить эту игру и начать новую</button></div>
+	
+	</div>
+
+
+<script type="text/javascript" src="js/my.js"> </script>
+
+</body>
+</html>
